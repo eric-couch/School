@@ -24,4 +24,21 @@ public class StudentService {
 
         students.add(freeda);
     }
+
+    public Student retrieveStudent(int studentID) {
+        for (Student student : students) {
+            if (student.getId() == studentID) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+    public List<Course> retrieveCourses(int studentID) {
+        Student student = retrieveStudent(studentID);
+        if (student == null) {
+            return null;
+        }
+        return student.getCourses();
+    }
 }
