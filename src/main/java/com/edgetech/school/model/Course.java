@@ -38,6 +38,14 @@ public class Course {
         return steps;
     }
 
+    public Course(int id, String name, String description, List<String> steps) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.steps = steps;
+    }
+
     @Override
     public String toString() {
         return String.format("Course [id=%s, name=%s, description=%s, steps=%s]",
